@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vamsi Icons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d0e41c;
+        }
+
+        .icon-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon i {
+            font-size: 28px;
+        }
+
+        .icon.whatsapp { color: #25D366; }
+        .icon.facebook { color: #1877F2; }
+        .icon.twitter { color: #1DA1F2; }
+        .icon.instagram { color: #E4405F; }
+        .icon.linkedin { color: #0077B5; }
+    </style>
+    <script>
+        function handleClick(platform) {
+            alert(`Opening ${platform}`);
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="icon-container">
+        <div class="icon whatsapp" onclick="handleClick('WhatsApp')">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="icon facebook" onclick="handleClick('Facebook')">
+            <i class="fab fa-facebook-f"></i>
+        </div>
+        <div class="icon twitter" onclick="handleClick('Twitter')">
+            <i class="fab fa-twitter"></i>
+        </div>
+        <div class="icon instagram" onclick="handleClick('Instagram')">
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="icon linkedin" onclick="handleClick('LinkedIn')">
+            <i class="fab fa-linkedin-in"></i>
+        </div>
+    </div>
+</body>
+</html>
